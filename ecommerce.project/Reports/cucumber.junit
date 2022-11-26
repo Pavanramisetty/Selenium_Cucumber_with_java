@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="7" time="100.876">
+    <testcase classname="Ecommerce website amazon login feature" name="User Should login with the credentials" time="21.982">
+        <system-out><![CDATA[Given User launches the amazon site home page...............................passed
+And Account signbuton should be displayed...................................passed
+When User click on account signin button....................................passed
+And User should navigate to username page...................................passed
+And User should see the "pavan.ramisetty91@gmail.com" field.................passed
+And User should see the continue button.....................................passed
+When User click on continue button..........................................passed
+And User should see the password field......................................passed
+And User should see the Keep me sign in checkbox............................passed
+And User should click Signin buton..........................................passed
+Then User should Land on Ecomerce amazon User Home page.....................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Search bar feature test in Amazon website" name="User should be able to search an Item in user Home page" time="11.319">
+        <system-out><![CDATA[Given User should be able to see the search bar in the home page............passed
+When User should click the search to enter the item.........................passed
+And User can be able to scroll down little down to select an item...........passed
+Then User should select an item from the filtered list......................passed
+And User should see the selected item is opened.............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Item specification test hovering and selecting the item images" name="User should be on the Item page" time="19.151">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id='availability']/span&quot;}&#10;  (Session info: chrome=107.0.5304.107)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [2dc688b11a639c8fe98b1648506e98fa, findElement {using=xpath, value=//*[@id='availability']/span}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Lithik\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55088}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55088/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 2dc688b11a639c8fe98b1648506e98fa" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given User should be able to magnify the selectem item by hovering the image.passed
+When User can be able to select all the images of the items one after another.passed
+And Verify the Item is in stock.............................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id='availability']/span"}
+  (Session info: chrome=107.0.5304.107)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2dc688b11a639c8fe98b1648506e98fa, findElement {using=xpath, value=//*[@id='availability']/span}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Lithik\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:55088}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55088/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2dc688b11a639c8fe98b1648506e98fa
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
+	at com.ecommerce.pages.ItemSpecificationPage.inStock(ItemSpecificationPage.java:28)
+	at com.ecommerce.stepdefs.F3_ItemSpec_stepdefs.verify_the_item_is_in_stock(F3_ItemSpec_stepdefs.java:36)
+	at ✽.Verify the Item is in stock(file:///C:/Users/Lithik/eclipse-workspace/ecommerce.project/src/test/resources/Features/F3_Item_Specifications.feature:14)
+]]></failure>
+    </testcase>
+    <testcase classname="Test the user cart items addition count and deletion" name="User Should be on the user cart page" time="10.82">
+        <system-out><![CDATA[Given User should see the addItem to cart button............................passed
+And User should be able to click the add to cart button.....................passed
+When Item is added to cart and available in cart............................passed
+And Change the item quantity of the item....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="User profile and user account edit feature" name="Navigate to home page and navigate to user account from the profile" time="12.466">
+        <system-out><![CDATA[Given User Should be navigate to user home page.............................passed
+And accounts and lists button should be displayed...........................passed
+When To enter into user profile place cursor on accounts drop down and wait till you see your accounts.passed
+And click on your accounts to go into user profile..........................passed
+And User should land on the edit profile page...............................passed
+Given User should be able to click on new address button....................passed
+Then User should be able to see the plus sign to add the new address........passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Adding the new address for the existing user" name="Add the full name of the new address" time="5.708">
+        <system-out><![CDATA[Given User should be on the user profile page...............................passed
+And Click on the new addess button to add new address.......................passed
+When Full name address feild should be availble.............................passed
+And Ener the full "new name" for the new address............................passed
+And Scrol down till the submit is visible...................................passed
+Then click on add new address...............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Logout feature from the website" name="User should logout from teh web app" time="10.137">
+        <system-out><![CDATA[Given Should be navigate to user home page..................................passed
+And Hover the mouse on accounts and list page to see the singout option.....passed
+When click on signout button................................................passed
+]]></system-out>
+    </testcase>
+</testsuite>
