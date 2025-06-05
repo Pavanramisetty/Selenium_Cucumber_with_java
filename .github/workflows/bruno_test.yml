@@ -31,6 +31,7 @@ jobs:
       # Run Bruno CLI tests with HTML reporting
       - name: Run Bruno Tests
         run: |
+          mkdir -p HTMLReporter
           cd HTMLReporter
           bru run --reporter-html ../HTMLReporter/Results.html
       # Upload the html test report as an artifact
