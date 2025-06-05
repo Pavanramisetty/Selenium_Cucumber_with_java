@@ -1,0 +1,189 @@
+[
+  {
+    "iterationIndex": 0,
+    "summary": {
+      "totalRequests": 2,
+      "passedRequests": 2,
+      "failedRequests": 0,
+      "totalAssertions": 4,
+      "passedAssertions": 3,
+      "failedAssertions": 1,
+      "totalTests": 6,
+      "passedTests": 5,
+      "failedTests": 1
+    },
+    "results": [
+      {
+        "test": {
+          "filename": "CreateUser.bru"
+        },
+        "request": {
+          "method": "POST",
+          "url": "https://reqres.in/api/users",
+          "headers": {
+            "content-type": "application/json"
+          },
+          "data": "{\n  \"name\": \"morpheus\",\n  \"job\": \"leader\"\n}"
+        },
+        "response": {
+          "status": 201,
+          "statusText": "Created",
+          "headers": {
+            "date": "Sun, 16 Feb 2025 04:39:35 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "content-length": "83",
+            "connection": "keep-alive",
+            "report-to": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1739680775&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=f2162YaE2jtPMmIbQgS8zKVOUClQb8VfavXfMMwGT9M%3D\"}]}",
+            "reporting-endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1739680775&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=f2162YaE2jtPMmIbQgS8zKVOUClQb8VfavXfMMwGT9M%3D",
+            "nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+            "x-powered-by": "Express",
+            "access-control-allow-origin": "*",
+            "etag": "W/\"53-bkZd+nls54HF+SSrtTuggz5jDCM\"",
+            "via": "1.1 vegur",
+            "cf-cache-status": "DYNAMIC",
+            "server": "cloudflare",
+            "cf-ray": "912adacc0d7d7f80-MAA",
+            "server-timing": "cfL4;desc=\"?proto=TCP&rtt=27990&min_rtt=20510&rtt_var=16992&sent=5&recv=5&lost=0&retrans=0&sent_bytes=2820&recv_bytes=791&delivery_rate=132618&cwnd=252&unsent_bytes=0&cid=3d6337391b31a0fa&ts=355&x=0\""
+          },
+          "data": {
+            "name": "morpheus",
+            "job": "leader",
+            "id": "53",
+            "createdAt": "2025-02-16T04:39:35.272Z"
+          },
+          "responseTime": 660
+        },
+        "error": null,
+        "assertionResults": [
+          {
+            "uid": "aTTAHLdBk2YDMo5QWgx1s",
+            "lhsExpr": "res.status",
+            "rhsExpr": "eq 201",
+            "rhsOperand": "201",
+            "operator": "eq",
+            "status": "pass"
+          },
+          {
+            "uid": "2Ix_KAcoyG3633gcGr-nx",
+            "lhsExpr": "res.body.name",
+            "rhsExpr": "eq morpheus1",
+            "rhsOperand": "morpheus1",
+            "operator": "eq",
+            "status": "fail",
+            "error": "expected 'morpheus' to equal 'morpheus1'"
+          },
+          {
+            "uid": "GWzpaMAYBw-Ew_DZJzuYH",
+            "lhsExpr": "res.body.job",
+            "rhsExpr": "eq leader",
+            "rhsOperand": "leader",
+            "operator": "eq",
+            "status": "pass"
+          }
+        ],
+        "testResults": [
+          {
+            "description": "name value test",
+            "status": "fail",
+            "error": "expected 'morpheus' to equal 'morpheus1'",
+            "actual": "morpheus",
+            "expected": "morpheus1",
+            "uid": "kj5GP6A5G27oWRRVZlznG"
+          },
+          {
+            "description": "status code test",
+            "status": "pass",
+            "uid": "qaPkXIm8ajid3Ytj0R_Zn"
+          },
+          {
+            "description": "name data type test",
+            "status": "pass",
+            "uid": "9KrUSMGHmyZ-HRpXtRDKJ"
+          },
+          {
+            "description": "status text check",
+            "status": "pass",
+            "uid": "Xb_P_w--8zAvZmEkINP-u"
+          },
+          {
+            "description": "header value test",
+            "status": "pass",
+            "uid": "FG3nYSEmOjL5v4z5hXStc"
+          }
+        ],
+        "runtime": 0.720013,
+        "suitename": "CreateUser",
+        "iterationIndex": 0
+      },
+      {
+        "test": {
+          "filename": "GetUser.bru"
+        },
+        "request": {
+          "method": "GET",
+          "url": "https://reqres.in/api/users/2",
+          "headers": {}
+        },
+        "response": {
+          "status": 200,
+          "statusText": "OK",
+          "headers": {
+            "date": "Sun, 16 Feb 2025 04:39:35 GMT",
+            "content-type": "application/json; charset=utf-8",
+            "transfer-encoding": "chunked",
+            "connection": "keep-alive",
+            "report-to": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1739589012&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=uWPyxWQV4Bm0EymKdtXPCooNnuOhvnS%2BKgsJtCCVmuA%3D\"}]}",
+            "reporting-endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1739589012&sid=c4c9725f-1ab0-44d8-820f-430df2718e11&s=uWPyxWQV4Bm0EymKdtXPCooNnuOhvnS%2BKgsJtCCVmuA%3D",
+            "nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+            "x-powered-by": "Express",
+            "access-control-allow-origin": "*",
+            "etag": "W/\"152-ApQgGHL6RKwaebFlrPCYPBO1xHg\"",
+            "via": "1.1 vegur",
+            "cache-control": "max-age=14400",
+            "cf-cache-status": "HIT",
+            "age": "1614",
+            "vary": "Accept-Encoding",
+            "server": "cloudflare",
+            "cf-ray": "912adace6f827f80-MAA",
+            "server-timing": "cfL4;desc=\"?proto=TCP&rtt=26897&min_rtt=19244&rtt_var=14931&sent=8&recv=7&lost=0&retrans=0&sent_bytes=4433&recv_bytes=1041&delivery_rate=141342&cwnd=254&unsent_bytes=0&cid=3d6337391b31a0fa&ts=458&x=0\""
+          },
+          "data": {
+            "data": {
+              "id": 2,
+              "email": "janet.weaver@reqres.in",
+              "first_name": "Janet",
+              "last_name": "Weaver",
+              "avatar": "https://reqres.in/img/faces/2-image.jpg"
+            },
+            "support": {
+              "url": "https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral",
+              "text": "Tired of writing endless social media content? Let Content Caddy generate it for you."
+            }
+          },
+          "responseTime": 103
+        },
+        "error": null,
+        "assertionResults": [
+          {
+            "uid": "mep1pHLiZq4huPUow873_",
+            "lhsExpr": "res.status",
+            "rhsExpr": "eq 200",
+            "rhsOperand": "200",
+            "operator": "eq",
+            "status": "pass"
+          }
+        ],
+        "testResults": [
+          {
+            "description": "status code test",
+            "status": "pass",
+            "uid": "v-rQvSaqHP8Zpm6Dd3-Vx"
+          }
+        ],
+        "runtime": 0.1100914,
+        "suitename": "GetUser",
+        "iterationIndex": 0
+      }
+    ]
+  }
+]

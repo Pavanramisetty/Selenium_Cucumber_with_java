@@ -1,0 +1,26 @@
+meta {
+  name: GetUser
+  type: http
+  seq: 2
+}
+
+get {
+  url: https://reqres.in/api/users/2
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
+
+script:pre-request {
+  // bru.runner.skipRequest();
+  
+}
+
+tests {
+  test("status code test", function() {
+    expect(res.getStatus()).to.equal(200);
+  })
+}

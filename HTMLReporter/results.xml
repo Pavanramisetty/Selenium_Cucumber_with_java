@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="CreateUser" errors="0" failures="2" skipped="0" tests="8" timestamp="2025-02-16T06:17:01.992" hostname="AkhilaLaptop" time="0.690">
+    <testcase name="res.status eq 201" status="pass" classname="https://reqres.in/api/users" time="0.086"/>
+    <testcase name="res.body.name eq morpheus1" status="fail" classname="https://reqres.in/api/users" time="0.086">
+      <failure type="failure" message="expected 'morpheus' to equal 'morpheus1'"/>
+    </testcase>
+    <testcase name="res.body.job eq leader" status="pass" classname="https://reqres.in/api/users" time="0.086"/>
+    <testcase name="name value test" status="fail" classname="https://reqres.in/api/users" time="0.086">
+      <failure type="failure" message="expected 'morpheus' to equal 'morpheus1'"/>
+    </testcase>
+    <testcase name="status code test" status="pass" classname="https://reqres.in/api/users" time="0.086"/>
+    <testcase name="name data type test" status="pass" classname="https://reqres.in/api/users" time="0.086"/>
+    <testcase name="status text check" status="pass" classname="https://reqres.in/api/users" time="0.086"/>
+    <testcase name="header value test" status="pass" classname="https://reqres.in/api/users" time="0.086"/>
+  </testsuite>
+  <testsuite name="GetUser" errors="0" failures="0" skipped="0" tests="2" timestamp="2025-02-16T06:17:01.997" hostname="AkhilaLaptop" time="0.564">
+    <testcase name="res.status eq 200" status="pass" classname="https://reqres.in/api/users/2" time="0.282"/>
+    <testcase name="status code test" status="pass" classname="https://reqres.in/api/users/2" time="0.282"/>
+  </testsuite>
+</testsuites>
